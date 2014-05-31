@@ -129,7 +129,6 @@ classdef Squares_plot < handle
             if nargin < 3
                 color = 'k';
             end
-            %direction are 1 for N, 2 for S, 3 for E, 4 for W
             switch direction
                 case 1
                     quiver(self.positions(id,1), self.positions(id, 2), -self.arrowSize, 0, color, 'linewidth', self.arrowLineWidth)
