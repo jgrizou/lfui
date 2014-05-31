@@ -37,7 +37,6 @@ classdef Discrete_mdp_gridworld < handle
             self.P = MDP.P;
             self.R = zeros(self.nS, self.nA);
             
-            
             tmpGridState = self.reshape_to_grid(1:self.nS);
             positions = zeros(self.nS, 2);
             for i = 1:self.gSize

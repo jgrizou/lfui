@@ -29,10 +29,10 @@ classdef Discrete_mdp_lineworld < handle
         function self = Discrete_mdp_lineworld(nA)
             
             if nargin > 0
-                if nnz(nA == [2 3])
+                if nnz(nA == [2, 3])
                     self.nA = nA;
                 else
-                    error('discrete_mdp_Tworld:Discrete_mdp_gridworld:NActionNonValid','The number of action is either 4 or 5 (default)')
+                    error('discrete_mdp_Tworld:Discrete_mdp_gridworld:NActionNonValid','The number of action is either 2 or 3 (default)')
                 end
             end
             
@@ -54,7 +54,7 @@ classdef Discrete_mdp_lineworld < handle
             self.P{2}(5,4) = 1;
             %action NOOP
             if self.nA == 3
-                self.P{5} = eye(self.nS);
+                self.P{3} = eye(self.nS);
             end
             
             % empty reward
