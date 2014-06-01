@@ -22,6 +22,12 @@ classdef Discrete_mdp_pick_and_place < handle
        
         bridge
         % bridge when removing dead states
+        
+        % actions
+        % 1 for right
+        % 2 for left
+        % 3 for grasping
+        % 4 for ungrapsing
 
     end
     

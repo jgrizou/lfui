@@ -17,7 +17,7 @@ end
 
 for iHandle = 1:length(handles)
     figure(handles(iHandle))
-    if nargin > 1
+    if ~isempty(plotFilenames)
         filename = fullfile(plotFolder, plotFilenames{iHandle});
     else
         filename = fullfile(plotFolder, sprintf('%03d', handles(iHandle)));
