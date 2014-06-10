@@ -131,8 +131,25 @@ switch methodInfo.samplingMethod
         
         % this is quite ugly (not stable), think hard if possible to do
         % something else
-        hypothesisEstimates = exp(hypothesisLogLikelihoods);
+        % there is a debate here, in the first place I thought using the
+        % exp() of the log estimate was the only thing to do, as we really
+        % compare the value estimated between hypothesis
+        
+        % hypothesisEstimates = exp(hypothesisLogLikelihoods);
+        
+        % but this really unstable when the estimate are very low
+        % probabilities
+        % therefore I decided to normalize the estimate before comparing
+        % them, this way we test whether some hypothesis are consistently
+        % above others, it may be slightly different in the end but it
+        % is still a measure related to what we aim for and it is robust
+        % to small values
+        
+        hypothesisEstimates = log_normalize_row(hypothesisLogLikelihoods);
         rec.log_field(['estimates_', filestr], hypothesisEstimates)
+        
+        % do you know a statistical test on the log domain already?
+        
         
         hypothesisConfidences = zeros(rec.nHypothesis, rec.nHypothesis);
         if length(rec.iStep) > rec.nInitSteps

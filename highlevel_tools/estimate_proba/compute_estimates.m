@@ -43,7 +43,7 @@ switch methodInfo.estimateMethod
                 case 'batch'
                     predictedPLabel = hypothesisClassifiers{iHyp}.logpredict(teacherSignals);
                     for iObservation = 1:nObservation
-                        matchingProba = teacherHypothesisPLabels{iHyp}(iObservation,:) * predictedPLabel';
+                        matchingProba = teacherHypothesisPLabels{iHyp}(iObservation, :) * predictedPLabel(iObservation, :)';
                         hypothesisLogLikelihoods(iHyp) = hypothesisLogLikelihoods(iHyp) + log(matchingProba + realmin);
                     end
                     
@@ -87,7 +87,7 @@ switch methodInfo.estimateMethod
         
     case 'power'
         [nCrossValidation] = process_options(varargin, 'nCrossValidation', []);
-        
+        %only for EEG data
         for iHyp = 1:nHypothesis
             confusionMatrix = hypothesisClassifiers{iHyp}.compute_proba_empirical_confusion_matrix(nCrossValidation);
             % normalize it per column!  may be optimized
