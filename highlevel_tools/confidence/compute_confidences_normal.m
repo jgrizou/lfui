@@ -57,10 +57,10 @@ for iHypothesis = 1:nHypothesis
     alphas = meansDiff ./ sqrt(varsSum);
     confidences(:,iHypothesis) = 0.5 + erf(alphas/sqrt(2))/2;
     
-    %fix problem of Nan when std are zero
+    %fix problem of Nan when var are zero
     if any(isnan(confidences(:,iHypothesis)))
         tmpDiff = (sign(meansDiff) + 1) / 2;
-        confidences(stdsSum == 0, iHypothesis) = tmpDiff(stdsSum == 0);
+        confidences(varsSum == 0, iHypothesis) = tmpDiff(varsSum == 0);
     end
 end
 
