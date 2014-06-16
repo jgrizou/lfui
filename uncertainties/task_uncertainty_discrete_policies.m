@@ -1,4 +1,4 @@
-function uncertaintyMap = new_task_uncertainty_discrete_policies(policies, probabilities, frame)
+function uncertaintyMap = task_uncertainty_discrete_policies(policies, probabilities, frame)
 %TASK_UNCERTAINTY_DISCRETE_POLICIES - Compute an uncertainty value for each state-action pair based on expected disagreement of different policies
 %The more optimal labels differ between policies, the more uncertainty.
 %
