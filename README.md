@@ -9,6 +9,9 @@ There is only one tutorial exemple to explain you how to run one experiment with
 mkdir foldername
 cd foldername
 git clone https://github.com/jgrizou/lfui
+cd lfui
+git checkout tags/thesis
+cd ..
 git clone https://github.com/jgrizou/matlab_tools
 cd matlab_tools
 git checkout tags/thesis
