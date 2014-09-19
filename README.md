@@ -15,6 +15,7 @@ cd ..
 git clone https://github.com/jgrizou/matlab_tools
 cd matlab_tools
 git checkout tags/thesis
+cd ..
 ```
 
 Then, using Matlab, run the foldername/lfui/example/init.m script which setup the matlab path and change some default figure thingies. Then you can open the foldername/lfui/example/gridworld/run_gridworld.m script and either have fun reading it or just run it to look at some stuff moving!
