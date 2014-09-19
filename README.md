@@ -3,7 +3,7 @@ Learning from Unlabelled Instructions
 
 If you do not have any idea about what this code is about, you can visit [this](http://jgrizou.com/projects/learning-from-unlabelled-instructions/) page.
 
-There is only one example for now, which is kind of a tutorial to explain you how to run one experiment with the current code. You also need to pull my [matlab\_tools](https://github.com/jgrizou/matlab_tools) repository, and checkout the tag called "thesis". 
+There is only one tutorial exemple to explain you how to run one experiment with the current code. You also need to pull my [matlab\_tools](https://github.com/jgrizou/matlab_tools) repository, and checkout the tag called "thesis". 
 
 ```
 mkdir foldername
