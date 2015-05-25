@@ -3,7 +3,7 @@ Learning from Unlabelled Instructions
 
 If you do not have any idea about what this code is about, you should visit [this page](http://jgrizou.com/projects/learning-from-unlabelled-instructions/).
 
-If your visit is related to our paper submitted in Plos One, please follow the tutorial next. Then, you might want to checkout the following repository: https://github.com/jgrizou/experiments_thesis. The experiments in the "power_vs_matching" folder explore the use of the power information. It runs with EEG data recorded from previous experiments.
+If your visit is related to our paper submitted in Plos One, please visit the following repository: https://github.com/flowersteam/self_calibration_BCI_plosOne_2015.
 
 There is one tutorial exemple to explain you how to run one experiment with the current code. You also need to pull my [matlab\_tools](https://github.com/jgrizou/matlab_tools) repository, and checkout the tag called "thesis". 
 
